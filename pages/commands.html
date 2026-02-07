@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Git Commands - Complete Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230066cc' d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🔧 GitMaster</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about-git.html">What is Git?</a></li>
+                <li><a href="commands.html" class="active">Commands</a></li>
+                <li><a href="workflows.html">Workflows</a></li>
+                <li><a href="best-practices.html">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Essential Git Commands</h1>
+                <p>Master the most important Git commands every developer should know</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="section">
+                <h2>Getting Started Commands</h2>
+                <div class="command-list">
+                    <div class="cards-grid">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=400&h=200&fit=crop&auto=format" alt="Git Init" loading="lazy">
+                            <h3>Initialize Repository</h3>
+                            <div class="command">git init</div>
+                            <p>Creates a new Git repository in the current directory. This is your first step when starting version control on a project.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=200&fit=crop&auto=format" alt="Git Clone" loading="lazy">
+                            <h3>Clone Repository</h3>
+                            <div class="command">git clone [url]</div>
+                            <p>Downloads a repository from a remote location (like GitHub) to your local machine, creating a complete copy with full history.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=400&h=200&fit=crop&auto=format" alt="Git Config" loading="lazy">
+                            <h3>Configure Git</h3>
+                            <div class="command">git config --global user.name "Your Name"</div>
+                            <div class="command">git config --global user.email "your.email@example.com"</div>
+                            <p>Set up your identity for Git commits. This information appears in your commit history.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Basic Workflow Commands</h2>
+                <div class="interactive-demo">
+                    <h3 class="text-blue">The Add-Commit Cycle</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>📊 Check Status</h4>
+                            <div class="command">git status</div>
+                            <p>Shows which files are modified, staged, or untracked. Your best friend for understanding repository state.</p>
+                        </div>
+                        <div class="card">
+                            <h4>➕ Stage Changes</h4>
+                            <div class="command">git add [file]</div>
+                            <div class="command">git add .</div>
+                            <p>Add files to the staging area. Use '.' to add all changed files, or specify individual files.</p>
+                        </div>
+                        <div class="card">
+                            <h4>💾 Commit Changes</h4>
+                            <div class="command">git commit -m "Commit message"</div>
+                            <div class="command">git commit -am "Add and commit"</div>
+                            <p>Save staged changes to repository history. The -am flag stages and commits tracked files in one step.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Branching Commands</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=200&fit=crop&auto=format" alt="Git Branch" loading="lazy">
+                        <h3>🌿 Branch Management</h3>
+                        <div class="command">git branch</div>
+                        <div class="command">git branch [branch-name]</div>
+                        <div class="command">git branch -d [branch-name]</div>
+                        <p>List branches, create new branches, or delete branches. Branches allow parallel development without affecting main code.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=200&fit=crop&auto=format" alt="Git Checkout" loading="lazy">
+                        <h3>🔄 Switch Branches</h3>
+                        <div class="command">git checkout [branch-name]</div>
+                        <div class="command">git checkout -b [new-branch]</div>
+                        <div class="command">git switch [branch-name]</div>
+                        <p>Move between branches or create and switch to new branches. Modern Git also includes 'switch' for clarity.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=200&fit=crop&auto=format" alt="Git Merge" loading="lazy">
+                        <h3>🔀 Merge Branches</h3>
+                        <div class="command">git merge [branch-name]</div>
+                        <div class="command">git merge --no-ff [branch-name]</div>
+                        <p>Combine changes from different branches. The --no-ff flag preserves branch history for better tracking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Remote Repository Commands</h2>
+                <div class="command-list">
+                    <div class="cards-grid">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=400&h=200&fit=crop&auto=format" alt="Git Remote" loading="lazy">
+                            <h3>🌐 Remote Management</h3>
+                            <div class="command">git remote -v</div>
+                            <div class="command">git remote add origin [url]</div>
+                            <p>View and manage remote repository connections. 'origin' is the conventional name for your main remote.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=200&fit=crop&auto=format" alt="Git Push" loading="lazy">
+                            <h3>📤 Push Changes</h3>
+                            <div class="command">git push origin [branch-name]</div>
+                            <div class="command">git push -u origin [branch-name]</div>
+                            <p>Upload your commits to remote repository. The -u flag sets up tracking for future pushes.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=200&fit=crop&auto=format" alt="Git Pull" loading="lazy">
+                            <h3>📥 Pull Changes</h3>
+                            <div class="command">git pull origin [branch-name]</div>
+                            <div class="command">git fetch origin</div>
+                            <p>Download changes from remote repository. Pull combines fetch and merge, while fetch only downloads.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>History and Information Commands</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&auto=format" alt="Git Log" loading="lazy">
+                        <h3>📜 View History</h3>
+                        <div class="command">git log</div>
+                        <div class="command">git log --oneline</div>
+                        <div class="command">git log --graph --all</div>
+                        <p>Display commit history. Use flags for different formats: --oneline for compact view, --graph for visual branch structure.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=200&fit=crop&auto=format" alt="Git Diff" loading="lazy">
+                        <h3>🔍 Show Differences</h3>
+                        <div class="command">git diff</div>
+                        <div class="command">git diff --staged</div>
+                        <div class="command">git diff [commit1] [commit2]</div>
+                        <p>Compare changes between files, commits, or branches. Essential for reviewing changes before committing.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=200&fit=crop&auto=format" alt="Git Show" loading="lazy">
+                        <h3>👁️ Show Commit Details</h3>
+                        <div class="command">git show [commit-hash]</div>
+                        <div class="command">git show HEAD</div>
+                        <p>Display detailed information about specific commits, including changes made. HEAD refers to the latest commit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Undoing Changes</h2>
+                <div class="interactive-demo">
+                    <h3 class="text-blue">⚠️ Use These Commands Carefully</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>↩️ Undo Working Directory Changes</h4>
+                            <div class="command">git checkout -- [file]</div>
+                            <div class="command">git restore [file]</div>
+                            <p>Discard changes in working directory. This cannot be undone, so use with caution.</p>
+                        </div>
+                        <div class="card">
+                            <h4>📤 Unstage Files</h4>
+                            <div class="command">git reset HEAD [file]</div>
+                            <div class="command">git restore --staged [file]</div>
+                            <p>Remove files from staging area while keeping changes in working directory.</p>
+                        </div>
+                        <div class="card">
+                            <h4>🔄 Reset Commits</h4>
+                            <div class="command">git reset --soft HEAD~1</div>
+                            <div class="command">git reset --hard HEAD~1</div>
+                            <p>Undo commits. --soft keeps changes staged, --hard discards everything. Use --hard very carefully!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Advanced Commands</h2>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=300&h=200&fit=crop&auto=format" alt="Git Stash" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Git Stash</h4>
+                            <p>Temporarily save uncommitted changes</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=300&h=200&fit=crop&auto=format" alt="Git Rebase" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Git Rebase</h4>
+                            <p>Rewrite commit history for cleaner timeline</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&h=200&fit=crop&auto=format" alt="Git Cherry Pick" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Cherry Pick</h4>
+                            <p>Apply specific commits to current branch</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=200&fit=crop&auto=format" alt="Git Tag" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Git Tags</h4>
+                            <p>Mark specific points in history (releases)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Learn Git</h3>
+                    <p><a href="about-git.html">What is Git?</a></p>
+                    <p><a href="commands.html">Essential Commands</a></p>
+                    <p><a href="workflows.html">Git Workflows</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="best-practices.html">Best Practices</a></p>
+                    <p><a href="#">Troubleshooting</a></p>
+                    <p><a href="#">Advanced Topics</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <p><a href="https://github.com" target="_blank">GitHub</a></p>
+                    <p><a href="https://git-scm.com" target="_blank">Official Git Site</a></p>
+                    <p><a href="#">Contributing</a></p>
+                </div>
+            </div>
+            <p>&copy; 2026 Git Master Guide. Built with ❤️ for developers.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced image loading verification
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('load', function() {
+                console.log(`✓ Image ${index + 1} loaded successfully:`, this.src);
+            });
+            img.addEventListener('error', function() {
+                console.error(`✗ Image ${index + 1} failed to load:`, this.src);
+                this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23e0e0e0"/><text x="200" y="100" text-anchor="middle" fill="%23999" font-family="Arial" font-size="16">Image not available</text></svg>';
+            });
+        });
+
+        // Interactive command demonstration
+        document.querySelectorAll('.command').forEach(cmd => {
+            cmd.addEventListener('click', function() {
+                this.style.background = 'var(--accent-blue)';
+                this.style.color = 'var(--dark-blue)';
+                setTimeout(() => {
+                    this.style.background = 'var(--dark-blue)';
+                    this.style.color = 'var(--text-light)';
+                }, 300);
+            });
+        });
+
+        // Fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

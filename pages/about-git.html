@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Git? - Understanding Version Control</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230066cc' d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🔧 GitMaster</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about-git.html" class="active">What is Git?</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="workflows.html">Workflows</a></li>
+                <li><a href="best-practices.html">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>What is Git?</h1>
+                <p>Discover the power of distributed version control and why Git revolutionized software development</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="section">
+                <h2>Git Fundamentals</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=400&h=200&fit=crop&auto=format" alt="Version Control System" loading="lazy">
+                        <h3>📚 Version Control System</h3>
+                        <p>Git is a distributed version control system that tracks changes in source code during software development. It allows multiple developers to work on a project simultaneously without interfering with each other's work.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=200&fit=crop&auto=format" alt="Distributed Architecture" loading="lazy">
+                        <h3>🌐 Distributed Architecture</h3>
+                        <p>Unlike centralized systems, Git is distributed. Every developer has a complete copy of the project history, making it resilient and allowing offline work. No single point of failure exists.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=200&fit=crop&auto=format" alt="Open Source" loading="lazy">
+                        <h3>🆓 Free & Open Source</h3>
+                        <p>Git was created by Linus Torvalds in 2005 for Linux kernel development. It's completely free, open-source, and has become the industry standard for version control.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>How Git Works</h2>
+                <div class="interactive-demo">
+                    <h3 class="text-blue">The Three States of Git</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>🗃️ Working Directory</h4>
+                            <p>Your project files as you see them in your file explorer. This is where you make changes to your code.</p>
+                        </div>
+                        <div class="card">
+                            <h4>📋 Staging Area</h4>
+                            <p>A holding area for changes you want to include in your next commit. Also called the "index".</p>
+                        </div>
+                        <div class="card">
+                            <h4>📦 Repository</h4>
+                            <p>Where Git permanently stores committed changes. Contains the complete project history.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Git vs Other Version Control Systems</h2>
+                <div class="command-list">
+                    <h3 class="text-blue">Key Advantages of Git</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=200&fit=crop&auto=format" alt="Speed Performance" loading="lazy">
+                            <h3>⚡ Speed</h3>
+                            <p>Git operations are incredibly fast because most operations are local. No network latency for common operations like branching, merging, and history browsing.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=200&fit=crop&auto=format" alt="Data Integrity" loading="lazy">
+                            <h3>🔒 Data Integrity</h3>
+                            <p>Git uses SHA-1 hashing to ensure data integrity. Every file and commit is checksummed, making it virtually impossible to lose or corrupt data without detection.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=200&fit=crop&auto=format" alt="Flexible Branching" loading="lazy">
+                            <h3>🌿 Flexible Branching</h3>
+                            <p>Git's branching model is its killer feature. Creating, switching, and merging branches is instantaneous and encourages experimentation and parallel development.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Git Terminology</h2>
+                <div class="command-list">
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>Repository (Repo)</h4>
+                            <p>A directory containing your project files and the complete history of all changes.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Commit</h4>
+                            <p>A snapshot of your project at a specific point in time, with a unique identifier and message.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Branch</h4>
+                            <p>A parallel version of your repository where you can make changes without affecting the main code.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Merge</h4>
+                            <p>The process of combining changes from different branches back into a single branch.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Clone</h4>
+                            <p>Creating a copy of a repository from a remote location to your local machine.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Pull/Push</h4>
+                            <p>Pull downloads changes from a remote repository; Push uploads your changes to a remote repository.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Git Ecosystem</h2>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=300&h=200&fit=crop&auto=format" alt="GitHub Platform" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>GitHub</h4>
+                            <p>Web-based hosting service for Git repositories</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=300&h=200&fit=crop&auto=format" alt="GitLab Platform" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>GitLab</h4>
+                            <p>DevOps platform with built-in Git repository management</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop&auto=format" alt="Bitbucket Platform" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Bitbucket</h4>
+                            <p>Atlassian's Git repository hosting service</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=300&h=200&fit=crop&auto=format" alt="Git GUI Tools" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>GUI Tools</h4>
+                            <p>Visual interfaces for Git operations</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Learn Git</h3>
+                    <p><a href="about-git.html">What is Git?</a></p>
+                    <p><a href="commands.html">Essential Commands</a></p>
+                    <p><a href="workflows.html">Git Workflows</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="best-practices.html">Best Practices</a></p>
+                    <p><a href="#">Troubleshooting</a></p>
+                    <p><a href="#">Advanced Topics</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <p><a href="https://github.com" target="_blank">GitHub</a></p>
+                    <p><a href="https://git-scm.com" target="_blank">Official Git Site</a></p>
+                    <p><a href="#">Contributing</a></p>
+                </div>
+            </div>
+            <p>&copy; 2026 Git Master Guide. Built with ❤️ for developers.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Image loading verification
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                console.log('✓ Image loaded successfully:', this.src);
+            });
+            img.addEventListener('error', function() {
+                console.error('✗ Image failed to load:', this.src);
+                this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23e0e0e0"/><text x="200" y="100" text-anchor="middle" fill="%23999" font-family="Arial" font-size="16">Image not available</text></svg>';
+            });
+        });
+
+        // Fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
